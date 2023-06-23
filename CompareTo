@@ -1,0 +1,35 @@
+package com.employee;
+
+public class Main {
+
+	public static void main(String args[]) {
+	String name="anusha";
+	
+	System.out.println(name.compareTo("khyati"));
+	//A.codePointAt value is 97  and a.codePointAt value is 65 so 65-97
+	//if they are equal the value is zero
+	System.out.println(compare(name, "khyati"));
+	}
+	public static int compare(String s1,String s2) {
+		
+		int len1=s1.length();
+		int len2=s2.length();
+		
+		int min=Math.min(len1, len2);
+		
+		
+		char[] arr1=s1.toCharArray();
+		char[] arr2=s2.toCharArray();
+		
+		for(int i=0;i<min;i++) {
+			char ch1=arr1[i];
+			char ch2=arr2[i];
+			if(ch1!=ch2) {
+				return  ch1-ch2;
+			}
+			
+		}
+		return len1-len2;
+		
+	}
+	}
